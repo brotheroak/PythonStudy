@@ -16,4 +16,16 @@ x = 4
 이 연습문제에서는 알고리즘의 효율성도 평가합니다. 만약 순차 (선형) 탐색 알고리즘을 구현하는 경우에는 제한 시간 요구사항을 만족하지 못하여 효율성 테스트 케이스들을 통과하지 못할 수도 있습니다.
 '''
 
-def binary_search(L,x):
+def solution(L, x):
+    mid = len(L) // 2
+    try:
+        if L[mid] > x:
+            mid = (len(L) + mid) // 2
+            return solution(L[mid:len(L)-1], x)
+        elif L[mid] < x:
+            mid //= 2
+            return solution(L[0:mid], x)
+        else :
+            return mid
+    except IndexError:
+        return -1
