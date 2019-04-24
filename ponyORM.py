@@ -243,12 +243,12 @@ while(True):
             if ans.isdigit() :
                 modify_student(ans,None,ans3,None)
             else:
-                modify_student(ans, None, ans3, None)
+                modify_student(None, ans, ans3, None)
         elif ans2 == 'b':
             if ans.isdigit() :
                 modify_student(ans,None,None,ans3)
             else:
-                modify_student(ans, None,None,ans3)
+                modify_student(None, ans, None, ans3)
     elif ord =='p':
         find_all()
     elif ord =='r':
